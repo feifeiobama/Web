@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cookbook.xsl"?>
+<cookbook>
+  <recipe>
+    <name>Rhubarb and Custard</name>
+    <skill-level>Easy</skill-level>
+    <cooking-time>40 minutes</cooking-time>
+    <description>A celebration of a quintessentially British fruit. Sweet, tart, creamy and comforting.</description>
+    <note>Vegetarian</note>
+    <ingredient>
+      <name>Milk</name>
+      <amount>15</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Rhubarb</name>
+      <amount>700</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Custard Powder</name>
+      <amount>8</amount>
+      <unit>tbsp</unit>
+    </ingredient>
+    <preparation>Mix together and put in oven proof dish</preparation>
+    <cooking>Heat in a moderate oven for 40 mins</cooking>
+    <from>WST Course Unit 7</from>
+  </recipe>
+
+  <recipe>
+    <name>Rhubarb &amp; custard crunch</name>
+    <skill-level>Easy</skill-level>
+    <cooking-time>30 minutes</cooking-time>
+    <description>Kids will enjoy assembling these little pots. If rhubarb isn't your thing, any cooked or canned fruit works well.</description>
+    <note>Vegetarian</note>
+    <ingredient>
+      <name>Rhubarb</name>
+      <amount>450</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Caster Sugar</name>
+      <amount>85</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Custard</name>
+      <amount>2</amount>
+      <unit>oz</unit>
+    </ingredient>
+    <ingredient>
+      <name>Honey Crunch Granola</name>
+      <amount>1/2</amount>
+    </ingredient>
+    <cooking>
+      First make the Honey crunch granola with almonds &amp; apricots (see 'Goes well with'). You'll need half the granola for this recipe.
+    </cooking>
+    <cooking>
+      Heat oven to 150C/130C fan/gas 2. Arrange the rhubarb in a roasting tin just big enough to hold it all in a single layer, scatter with the sugar and cover with foil. Bake for 15-20 minutes until just tender, then cool in the tin.
+    </cooking>
+    <cooking>
+      Spoon a little rhubarb into the base of 6 glasses or pots, then top with a couple of tbsp custard. Sprinkle over some granola, then repeat the layers to fill the glasses.
+    </cooking>
+    <from>Good Food magazine, March 2010</from>
+  </recipe>
+
+  <recipe>
+    <name>Rhubarb &amp; custard cocktail</name>
+    <skill-level>Easy</skill-level>
+    <cooking-time>25 minutes</cooking-time>
+    <description>An elegant vodka-based drink that'll wow your guests - it's made with creamy advocaat liqueur and homemade fruit syrup.</description>
+    <ingredient>
+      <name>Rhubarb</name>
+      <amount>300</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Caster Sugar</name>
+      <amount>85</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Vodka</name>
+      <amount>100</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Advocaat</name>
+      <amount>30</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Lemonade</name>
+      <amount>75</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <preparation>
+      To make the rhubarb syrup, put the caster sugar in a saucepan with 75ml water. Heat very gently, so the sugar disappears but the water doesn’t bubble. Tip in the chopped rhubarb, cover with a tight-fitting lid and increase the heat a little so it begins to boil. Simmer, covered, for about 5 mins until the rhubarb is very tender but not disintegrating.
+    </preparation>
+    <cooking>
+      Turn off the heat, and tip the pan’s contents into a fine sieve over a bowl. Use a wooden spoon to gently squeeze the rhubarb so that you get all the juices, but no pulp. Tip back into the pan and boil rapidly for a few mins until just syrupy. Pour into a jug – you should have about 125ml. Leave to cool completely. Any leftovers will keep in the fridge for up to 1 month.
+    </cooking>
+    <cooking>
+      Chill 4 cocktail glasses with ice or in your freezer. Shake the vodka and 100ml of the rhubarb syrup together with ice until mixed and chilled down. Make small shreds of rhubarb using a vegetable peeler and place into iced water – this will make them curl up.
+    </cooking>
+    <cooking>
+      In a separate jug, whisk together the advocaat and lemonade with more ice to lighten. Divide the vodka and rhubarb mixture between the glasses, straining through a small sieve to catch the ice.
+    </cooking>
+    <cooking>
+      Carefully pour 25ml of your advocaat mixture into each glass over an upsidedown spoon (the mixture should float on the surface of the vodka syrup mixture). Drain the rhubarb shreds well and use to garnish your cocktails.
+    </cooking>
+    <from>Good Food magazine, March 2013</from>
+  </recipe>
+
+  <recipe>
+    <name>Rhubarb &amp; custard muffins</name>
+    <skill-level>More effort</skill-level>
+    <cooking-time>35-40 minutes</cooking-time>
+    <description>A scrumptious combination with a surprise filling.</description>
+    <note>Freezable</note>
+    <ingredient>
+      <name>Roasted Rhubarb</name>
+      <amount>1/2</amount>
+    </ingredient>
+    <ingredient>
+      <name>Thick Devon Custard</name>
+      <amount>8</amount>
+      <unit>tbsp</unit>
+    </ingredient>
+    <ingredient>
+      <name>Light Muscovado Sugar</name>
+      <amount>140</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Vegetable Oil</name>
+      <amount>75</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Egg</name>
+      <amount>1</amount>
+    </ingredient>
+    <ingredient>
+      <name>Grated Orange</name>
+      <amount>1</amount>
+    </ingredient>
+    <ingredient>
+      <name>Carton Soured Cream</name>
+      <amount>284</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Flour</name>
+      <amount>300</amount>
+      <unit>g</unit>
+    </ingredient>
+    <preparation>
+      Prepare the Roasted rhubarb, then cool and drain off the juices (the juice is good mixed into plain yogurt). Heat oven to 180C/fan 160C/gas 4. Line a 12-hole muffin tin with muffin paper cases. In a large bowl, beat together the sugar, oil, egg, orange zest and soured cream until there are no lumps and all are completely combined. Gently mix in the flour, then fold in the rhubarb.
+    </preparation>
+    <cooking>
+      Divide 3⁄4 of the batter evenly between the paper cases to generously fill. Using a spoon, press in the centre of each muffin to make a dip. Fill each dip with a small blob of chilled custard, then gently smooth the rest of the muffin mix over the custard. Bake for 25-30 mins or until risen, pale golden and oozing custard. Sprinkle each with a little caster sugar while still warm. Best eaten the day they are made.
+    </cooking>
+    <from>Good Food magazine, May 2005</from>
+  </recipe>
+</cookbook>
+

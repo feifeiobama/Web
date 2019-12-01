@@ -1,0 +1,51 @@
+@(guestForm: Form[Guest])(implicit request: Http.Request, messages: play.i18n.Messages)
+
+@import helper._
+
+@implicitField = @{ FieldConstructor(tags.forms.field_constructor.render) }
+
+@main {
+
+    <h1 class="my-3" id="page-title">Join survey</h1>
+
+    @form(routes.HomeController.save()) {
+
+        @CSRF.formField
+        <div class="row">
+            <div class="col-md-3 mb-3">
+            @inputText(guestForm("guest_name"), '_label -> "Name", '_help -> "")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+            @inputText(guestForm("age"), '_label -> "Age", '_help -> "")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+            @select(
+                guestForm("gender"),
+                Seq(
+                    "male" -> "Male",
+                    "female" -> "Female",
+                    "other" -> "Other"
+                ),
+                '_default -> "Choose a gender",
+                '_label -> "Gender"
+            )
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+            @inputText(guestForm("e_mail"), '_label -> "E-mail", '_help -> "")
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-success" type="submit">Submit</button>
+            <span class="mx-2">or</span>
+            <a href="@routes.HomeController.list()" id="add" class="btn btn-light" role="button">Cancel</a>
+        </div>
+    }
+
+}

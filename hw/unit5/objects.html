@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+    <script>
+        // Objects
+        let tourOperator = "Ten Bellies Tours"; // a global variable
+        let holidayList = [];
+
+        // An object IS a function
+        function Holiday(destination, duration, cost) {
+            this.destination = destination; //"this" used in same sense as Java
+            this.duration    = duration;
+            this.cost        = cost;
+            this.agent       = tourOperator;
+        }
+
+        function makeHoliday(dest, dur, cost) {
+            let hol = new Holiday(dest, dur, cost);
+            holidayList.push(hol);
+            outputObject(hol);
+            // To output one named element could use
+            //document.write("Tour Agent is: " + hol.agent);
+        }
+
+        function outputObject(anObject) {
+            for (let f in anObject) {
+                document.write(f + " = " + anObject[f] + "<br/>");
+            }
+        }
+
+        function listHolidays() {
+            document.write("<ul>");
+            for (let holiday of holidayList) {
+                document.write("<li>");
+                outputObject(holiday);
+                document.write("</li>");
+            }
+            document.write("</ul>");
+        }
+    </script>
+</head>
+
+<body style="padding: 0">
+<script>
+    document.write("<h2>Objects</h2>");
+    document.write("<b>Hi there</b><br />");
+
+    args = [["Toronto", "2 Weeks", "$400"], ["New York", "6 Days", "$2500"]];
+    document.write("<h4>Adding new holidays using makeHoliday:</h4>");
+    for (let [dest, dur, cost] of args) {
+        makeHoliday(dest, dur, cost);
+    }
+
+    document.write("<h4>Invoking listHolidays:</h4>");
+    listHolidays();
+</script>
+</body>
+
+</html>

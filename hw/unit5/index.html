@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 5 Homework</title>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .emphasize {
+            color: #FF00FF;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Unit 5: JavaScript</h2>
+    </div>
+    <hr>
+    <h3>Homework 0</h3>
+    <div class="indent">
+        <ol class="indent">
+            <li>
+                <div class="question">
+                    What are JavaScript browser sniffers?
+                </div>
+                <p>
+                    JavaScript Browser Sniffer is a browser identifier written in JavaScript (EcmaScript) and released
+                    under the LGPL license. It will tell which browser, version and operating system you (the visitor)
+                    are using (it's like phpsniff, but in JavaScript)
+                </p>
+            </li>
+            <li>
+                <div class="question">
+                    Why are they so commonly used in javascripts?
+                </div>
+                <p>
+                    Because identify the browser and its version is crucial for the consistent display of content under
+                    different browsers. With JavaScript browser sniffers, we can serve browser-appropriate content to
+                    visitors.
+                </p>
+            </li>
+        </ol>
+    </div>
+    <h3>Homework 1</h3>
+    <div class="indent">
+        <div class="question">
+            Write a few lines of well-formatted html using JavaScript - your home town & country , your favourite TV
+            show, and your favourite food!
+        </div>
+        <p><a href="hiThere.html">hiThere.html</a></p>
+        <iframe src="hiThere.html" style="width: 100%"></iframe>
+    </div>
+    <h3>Homework 2</h3>
+    <div class="indent">
+        <div class="question">
+            <ol class="indent">
+                <li>Output double whatever value is returned from function myAlert2</li>
+                <li>Write another function which takes 2 strings and returns them with <span
+                        class="emphasize">!=</span> between them (e.g. <span
+                        class="emphasize">this != that</span>), then output this new string.
+                </li>
+            </ol>
+        </div>
+        <p><a href="function.html">function.html</a></p>
+        <p>I didn't put the iframe element here, otherwise you'd get an
+            alert :)</p>
+    </div>
+    <h3>Homework 3</h3>
+    <div class="indent">
+        <div class="question">
+            Get a URL from the user using a popup then redirect page using <span class="emphasize">location</span>
+        </div>
+        <p><a href="popups.html">popups.html</a></p>
+        <iframe src="popups.html" style="width: 100%"></iframe>
+    </div>
+    <h3>Homework 4</h3>
+    <div class="indent">
+        <div class="question">
+            <ul class="indent">
+                <li>Declare a global variable to hold a list (array) of holidays.</li>
+                <li>Edit <span class="emphasize">makeHoliday</span> so that it adds new holidays to the array.</li>
+                <li>Make more holidays using <span class="emphasize">makeHoliday</span>.</li>
+                <li>Write and call a function to loop over and display all the holidays in the array.</li>
+            </ul>
+        </div>
+        <p><a href="objects.html">objects.html</a></p>
+        <iframe src="objects.html" style="width: 100%"></iframe>
+    </div>
+    <h3>Homework 5</h3>
+    <div class="indent">
+        <div class="question">
+            <p>Now you need to validate and process an HTML form. For reference <a
+                    href="http://162.105.146.123/wst/webtech2019/unit5UWE/html/wizardFormBare.html">wizardFormBare.html</a>
+                is the same code but stripped of javascript.</p>
+            <ol class="indent">
+                <li>Use a regular expression to check <span class="emphasize">age</span> is numbers only and is
+                    sensible value (5 < age < 150)
+                </li>
+                <li>Write a CGI/PHP program to process the form and submit if all is OK .</li>
+            </ol>
+            <p>You would receive a bonus if you realized more functions with javascript. Remember to mention your
+                efforts on your pages.</p>
+        </div>
+        <p><a href="wizardForum.html">wizardForum.html</a></p>
+        <iframe src="wizardForum.html" style="width: 100%"></iframe>
+        <p>I modified checkSubmit function to check the format of both Age and ID Number, and any error detected is
+            displayed in the text box. If all input is OK, the CGI program <a
+                    href="http://162.105.146.123/wst/webtech2019/unit5UWE/dump.txt">dump.pl</a> will printout the form
+            values.</p>
+    </div>
+    <hr>
+    <span class="fl">
+    [<a href="../../index.html">Index</a>] [<a
+            href="http://162.105.146.123/wst/webtech2019/unit5UWE/index.html">Course</a>]
+</span>
+    <span class="fr">
+    by Sun Zhicheng
+</span>
+</div>
+</body>
+
+</html>

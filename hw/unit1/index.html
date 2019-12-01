@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 1 Homework</title>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Unit 1: The Overview and fundamentals</h2>
+    </div>
+    <hr>
+    <h3>Homework 1</h3>
+    <div class="indent">
+        <p class="question">
+            For the three categories of web software technology we've just defined, you are asked to find out which
+            category so-called "Chrome plug-in" technology belongs to. Please describe the basic idea of the technology,
+            and give your reasoning on its position in the technology categories.
+        </p>
+        <p>
+            I think "Chrome plug-in" technology belongs to <b>Distributed Object Technology</b>.
+        </p>
+        <p>
+            "Chrome plug-in" is a kind of plugin that runs within a web page and adds functionality to it by invoking
+            PPAPI (or NPAPI on older Chrome versions). For example, Adobe Flash Player in Chrome is a PPAPI plugin that
+            helps view multimedia contents and execute Internet applications.
+        </p>
+        <p>
+            "Chrome plug-in" follows the principle of "distributed object". It is distributed on browser side and gives
+            users remote access to objects or functions on a different server. Further more, PPAPI allows it to "plug
+            and play" anywhere. These makes it interoperable regardless of time, space, platform and awareness, and
+            that's why it belongs to Distributed Object Technology.
+        </p>
+    </div>
+    <h3>Homework 2</h3>
+    <div class="indent">
+        <p class="question">
+            In a normal intercommunication between Web browser and Web Server, Web Server closes the network
+            communication right after it sends back the document requested by the browser. Think about this
+            <b>statusless</b> character of World Wide Web. Give some good points and bad points of it. Can a web server
+            know exactly how many browsers are reading its document?
+        </p>
+        <p>
+            <b>Good points</b> of the <b>statusless</b> character of World Wide Web:
+        </p>
+        <ul>
+            <li>
+                Without having to wait ages for client to respond, web server can be more efficient, which means it can
+                response quicker and handle more requests.
+            </li>
+            <li>
+                Statusless makes logic simpler for both server end and client end, and therefore reduces cpu and memory
+                consumption.
+            </li>
+            <li>
+                This also relieves pressure on the network line of both sides.
+            </li>
+        </ul>
+        <p>
+            <b>Bad points</b>:
+        </p>
+        <ul>
+            <li>
+                Statusless character is not conductive to complex communication between server and client.
+            </li>
+            <li>
+                The server doesn't know if the client have received the whole document, and the repeated transmission of
+                a full document can be a great waste.
+            </li>
+            <li>
+                The cost of reconnecting is relatively high when a client requests many documents from the same website.
+            </li>
+        </ul>
+        <p>
+            A web server <b>CANNOT</b> know exactly how many browsers are reading its document in a normal
+            intercommunication case, because the server closes communication right after it sends out the document, and
+            browsers won't inform the server when closing the document.
+        </p>
+    </div>
+    <h3>Homework 3 (optional)</h3>
+    <div class="indent">
+        <p class="question">
+            Open Question: of those client side technologies, why Java Applet is getting dead and Javascript success?
+            Try to explain from the "REST" perspective.
+        </p>
+        <p>
+            To run Java applet you'll need to install JRE, which is inconvenient. Portability is also limited since some
+            mobile platforms don't support applet runs. JavaScript, on the contrary, is web native and plays nice with
+            HTML and CSS. It is widely supported by most modern explorers.
+        </p>
+        <p>
+            Java applet runs within JVM in a process separate from the web browser itself, so its capability to interact
+            with browser is not as good as JavaScript. Since it is self-contained, it doesn't have access to client-side
+            resources like files and operating system.
+        </p>
+        <p>
+            There are many other reasons. For example, Java applet is much unsafer, since malicious developers may
+            implant backdoors to track users or perform harmful actions. Besides, applets must be compiled into machine
+            code before testing or deploying, while you can simply run JavaScript codes. There is also saying that
+            JavaScript is easier to learn.
+        </p>
+        <p>
+            In a word, Java applet violets some constraints of the REST architecture style but JavaScript doesn't. That
+            is why Java Applet is getting dead and Javascript success.
+        </p>
+    </div>
+    <hr>
+    <span class="fl">
+    [<a href="../../index.html">Index</a>] [<a
+            href="http://162.105.146.123/wst/webtech2019/overview/index.html">Course</a>]
+</span>
+    <span class="fr">
+    by Sun Zhicheng
+</span>
+</div>
+</body>
+
+</html>

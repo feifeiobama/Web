@@ -1,0 +1,38 @@
+<?xml version = "1.0"?>
+<!-- cookbook.xs -->
+
+<xs:schema
+  xmlns:xs =  "http://www.w3.org/2001/XMLSchema"
+  targetNamespace = "."
+  xmlns = "."
+  elementFormDefault = "qualified">
+
+  <xs:element name = "cookbook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="recipe" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name = "name" minOccurs="1" maxOccurs="1"/>
+              <xs:element name = "skill-level" maxOccurs="1"/>
+              <xs:element name = "cooking-time" maxOccurs="1"/>
+              <xs:element name = "description" maxOccurs="1"/>
+              <xs:element name = "note" maxOccurs="1"/>
+              <xs:element name = "ingredient" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name = "name" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name = "amount" maxOccurs="1"/>
+                    <xs:element name = "unit" maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name = "preparation" maxOccurs="unbounded"/>
+              <xs:element name = "cooking" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

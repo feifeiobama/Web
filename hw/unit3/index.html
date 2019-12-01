@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 3 Homework</title>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css"/>
+    <script src="../../js/validate.js"></script>
+    <!-- Shuang Fei Yi -->
+    <style>
+        .wrapper {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .col {
+            float: left;
+        }
+
+        #main {
+            width: 100%;
+        }
+
+        #main-wrap {
+            margin: 0 100px;
+            height: 600px;
+            padding: 0 20px;
+            overflow: scroll;
+        }
+
+        #left, #right {
+            width: 100px;
+            height: 600px;
+            text-align: center;
+        }
+
+        #left {
+            margin-left: -100%;
+        }
+
+        #right {
+            margin-left: -100px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <h2>Unit 3: Basic protocol II, CSS & CGI</h2>
+</div>
+<hr>
+<div class="wrapper">
+    <div id="main" class="col">
+        <div id="main-wrap" style="background-color: linen">
+            <ol class="indent">
+                <li>
+                    <p>I've implemented the page layout exactly as required, and tested it in Firefox, IE 11, Opera,
+                        Safari, Chrome and Microsoft Edge.</p>
+                    <p>The webpage passed both <a href="http://validator.w3.org/">the W3C Markup Validation</a>
+                        and <a href="http://jigsaw.w3.org/css-validator/">the W3C CSS Validation</a>. The icon is
+                        placed below:</p>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img style="border:0;width:88px;height:31px"
+                             src="http://jigsaw.w3.org/css-validator/images/vcss"
+                             alt="Valid CSS!"/>
+                    </a>
+                </li>
+                <li>
+                    <p>Here is a questionnaire to collect basic information, and you can view and delete collected
+                        items.</p>
+                    <fieldset style="width: 300px;">
+                        <legend>Questionnaire</legend>
+                        <form action="/cgi-bin/submit.pl" method="post" onsubmit="return validate()">
+                            <label for="name" id="nameLabel">Name</label>: <input type="text" name="name"
+                                                                                  id="name"/><br>
+                            <label for="age" id="ageLabel">Age</label>: <input type="text" name="age" id="age"/><br>
+                            <label for="gender">Gender</label>:
+                            <select name="gender" id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select><br>
+                            <label for="email" id="emailLabel">E-mail: </label><input type="text" name="email"
+                                                                                      id="email"/><br>
+                            <input type="submit" value="Submit"/>
+                            <input type="reset" value="Clear Form"/>
+                            <hr>
+                            To see the results collected so far, click <a href="/cgi-bin/list.pl">here</a>.
+                        </form>
+                    </fieldset>
+                    <p>The input will be checked on submit, and invalid items will be marked in <span
+                            style="color: red; ">red</span>. Pages produced by CGI are successfully checked as XHTML 1.0
+                        Transitional.</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div id="left" class="col" style="background-color: wheat"><br>Left<br>Column</div>
+    <div id="right" class="col" style="background-color: wheat"><br>Right<br>Column</div>
+</div>
+<hr>
+<div>
+<span class="fl">
+[<a href="../../index.html">Index</a>] [<a
+        href="http://162.105.146.123/wst/webtech2019/unit3/index.html">Course</a>]
+</span>
+    <span class="fr">
+by Sun Zhicheng
+</span>
+</div>
+</body>
+
+</html>

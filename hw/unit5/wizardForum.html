@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>wizardForum</title>
+    <script>
+        function checkSubmit() {
+
+            let q = document.quiz;
+            let qc = q.chat;
+
+            qc.value = "";
+
+            window.alert("Checking submit ..." + document.quiz.watch[0].checked);
+
+            for (let i = 0; i < q.holiday.options.length; i++) {
+                if (q.holiday.options[i].selected) {
+                    qc.value += "Selected: " + q.holiday.options[i].value + "\n";
+                }
+            }
+
+            if (noValue(q.Personal_FirstName.value)) {
+                qc.value += "What no name? - I shall call you The Doctor\n";
+                q.Personal_FirstName.value = "The Doctor";
+            }
+
+            let valid = true;
+            valid = checkText(q, qc) && valid;
+            valid = checkAge(q, qc) && valid;
+            valid = checkID(q, qc) && valid;
+
+            return valid;
+        } // checkSubmit
+
+        function noValue(val) {
+            if (val.search(/\w/) == -1) {
+                return true;
+            }
+            return false;
+        } //noValue
+
+        function checkText(q, qc) {
+            //Warn if text boxes are empty (any alphanumeric is OK)
+            let valid = true;
+            for (let i = 0; i < q.length; i++) {
+                if (noValue(q.elements[i].value)) {
+                    qc.value += "No value: " + q.elements[i].name + "\n";
+                    valid = false;
+                }
+            }
+            return valid;
+        }// checkText
+
+        function checkAge(q, qc) { // Check age is number only and between 5-150
+            let age = q.Personal_Age.value;
+            if (noValue(age)) return false;
+            if (age.search(/^\d/) == -1) {
+                qc.value +="Age should be a number!" + "\n";
+                return false;
+            }
+            let ageNum = parseInt(age);
+            if (ageNum < 5 || ageNum > 150) {
+                qc.value += "Age should be between 5 to 150!" + "\n";
+                return false;
+            }
+            return true;
+        }
+        
+        function checkID(q, qc) {
+            let id = q.Personal_IDNumber.value;
+            if (noValue(id)) return false;
+            if (id.search(/^\d/) == -1) {
+                qc.value +="ID should be a number!" + "\n";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+<h1>Form 2 Wizard</h1>
+<hr>
+<h2>A dummy form created with MS Frontpage</h2>
+<p>(Handlers added by hand)</p>
+
+<form action="/cgi-bin/dump.pl" onSubmit="return checkSubmit();" method="post" name="quiz">
+    <ol>
+        <li>
+            <p>please identify and describe yourself:</p>
+            <table>
+                <tr>
+                    <td style="text-align:right"><em>First name</em></td>
+                    <td><input type="text" name="Personal_FirstName" size=25></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right"><em>Last name</em></td>
+                    <td><input type="text" name="Personal_LastName" size=25</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right"><em>Age</em></td>
+                    <td><input type="text" name="Personal_Age" size=3 maxlength=3></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right"><em>Sex</em></td>
+                    <td><input type="radio" name="Personal_Sex" value="Male" checked>Male
+                        <input type="radio" name="Personal_Sex" value="Female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right"><em>ID Number</em></td>
+                    <td><input type="text" name="Personal_IDNumber" size=16 maxlength=16></td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <p>Choose one of the following options:</p>
+            <p><input type="radio" name="watch" value="Dunno" checked> I don't know?!
+                <br><input type="radio" name="watch" value="radio"> radio
+                <br><input type="radio" name="watch" value="TV"> TV
+                <br><input type="radio" name="watch" value="Film"> Film
+                <br><br>
+            </p>
+        </li>
+
+        <li>
+            <p>Choose one of the following options:</p>
+            <p><select name="holiday">
+                <option value="Greece" SELECTED>Greece
+                <option value="Italy">Italy
+                <option value="France">France
+                <option value="Spain">Spain
+            </select>
+                <br>
+            </p>
+        </li>
+
+        <li>
+            <p>How would you rate your knowledge of JavaScript?</p>
+            <p>
+                <input type="radio" name="knowledge" value="1" onClick="alert('Time for some SERIOUS learning');">1
+                <input type="radio" name="knowledge" value="2"
+                       onClick="alert('I hope you\'re yearning for some learning');">2
+                <input type="radio" name="knowledge" value="3" checked>3
+                <input type="radio" name="knowledge" value="4">4
+                <input type="radio" name="knowledge" value="5">5
+                <br>
+            </p>
+        </li>
+
+    </ol>
+
+    <p/>
+    <!-- The text box -->
+    <textarea name="chat" rows=5 cols=40></textarea>
+    <p/>
+    <input type="button" value="Don't push Me" name="push" onClick="alert('HOW RUDE!!!!\nI asked you NOT to push me');">
+    <input type="submit" value="Submit form">
+    <input type="reset" value="Reset form" onClick="return confirm('Are you sure?');">
+
+</form>
+
+<hr>
+<h5>Sun Zhicheng. Copyright © 9102 [feifeiobama]. No rights reserved. Revised: 2019</h5>
+</body>
+
+</html>

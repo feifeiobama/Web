@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>function.html</title>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css"/>
+    <script>
+        // Using Functions
+        function myAlert() {
+            window.alert("Hello");
+        }
+
+        function myAlert2(aString) {
+            //this function takes parameter
+            // it also returns a value
+            window.alert("Alerting: " + aString);
+            return 34;
+        }
+
+        function neq(aString, bString) {
+            if (aString != bString) {
+                return aString + " != " + bString;
+            }
+        }
+    </script>
+</head>
+
+<body style="padding: 0">
+<script>
+    document.write("Mr Pudding says: <b>Hi there</b><br/>");
+    // Call functions and pass parameters, get return values
+    document.write("<ol>");
+
+    document.write("<li>");
+    myAlert();
+    result = myAlert2("everyone");
+    document.write("The return value was: " + result + "<br/>");
+    document.write("Doubled return value: " + result * 2);
+    document.write("</li>");
+
+    document.write("<li>");
+    document.write(neq("this", "that"));
+    document.write("</li>");
+</script>
+</body>
+
+</html>

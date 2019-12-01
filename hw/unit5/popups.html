@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Popups</title>
+    <script>
+        function setURL() {
+            let url = prompt("Enter a URL:", "http://");
+            if (url) window.location = url;
+        }
+    </script>
+</head>
+
+<body>
+    Click on the button to redirect page: <input type="button" value="popup" onclick="setURL()"/>
+</body>
+
+</html>

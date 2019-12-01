@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 4 Homework</title>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css"/>
+    <script src="../../js/validate.js"></script>
+    <script src="../../js/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.datetimepicker.css"/>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/jquery.datetimepicker.js"></script>
+    <link rel="stylesheet" href="../../css/default.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Unit 4: PHP & Access Database through Web</h2>
+    </div>
+    <hr>
+    <h3>Homework 1</h3>
+    <div class="indent">
+        <p class="question">
+            Answer the three questions asked in the course.
+        </p>
+        <ol class="indent">
+            <li>
+                <div class="question">
+                    Give the SELECT command to answer the question Who will go to the party held in Peking
+                    University?
+                </div>
+                <pre><code class="SQL">SELECT guest.Guest_Name
+FROM guest, party, guest_party
+WHERE guest.Guest_ID=guest_party.Guest_ID
+AND guest_party.Party_Num=party.Party_Num
+AND party.Place='Peking University'</code></pre>
+            </li>
+            <li>
+                <div class="question">
+                    Figure out a way to obtain the column labels returned by mysql_fetch_array.
+                </div>
+                <pre><code class="PHP">$row = mysql_fetch_assoc($result);
+while ($column = each($row)) {
+    print $column["key"] . " ";
+}</code></pre>
+            </li>
+            <li>
+                <div class="question">
+                    Tell the difference between a CGI program and a PHP program executed by a Web Server.
+                </div>
+                <ul class="indent">
+                    <li>
+                        CGI programs are language independent, and can be written in C, C++, Perl, etc. PHP programs are
+                        obviously written in PHP.
+                    </li>
+                    <li>
+                        A CGI program is any program designed to accept and return data that confirms to the CGI
+                        specification. A PHP program can do various things, like operating a database.
+                    </li>
+                    <li>
+                        CGI is a protocol for transferring information between a web server and an independent process.
+                        PHP is often used in back-end programming.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <h3>Homework 2</h3>
+    <div class="indent">
+        <p class="question">
+            Set up PHP for your Apache and test it. <a
+                href="http://162.105.146.123/wst/webtech2019/unit3_5/phpconfigure.php">Detailed instructions</a><br>
+            NOTICE: The compiled results of PHP is quite large and you may exceed your disk quota. Please delete the
+            compiled results of PHP after installing. Your account will be locked if you exceed your quota for 7 days.
+        </p>
+        <p>
+            DONE. Check <a href="/php/first.php">first.php</a> for more information.
+        </p>
+        <p>
+            <b>P.S.</b> After I deleted compile results in the directory php-7.3.10/, the disk usage is
+            222M, which exceeds the soft limit (200M) mentioned in HTML comments. I can do nothing to fix it.
+        </p>
+    </div>
+    <h3>Homework 3</h3>
+    <div class="indent">
+        <p class="question">
+            Transform the guest book that you implemented in week 3 into a Database version. <a
+                href="http://162.105.146.123/wst/webtech2019/unit3_5/lab_mysql.php">Detailed instructions</a>
+        </p>
+        <fieldset style="width: 300px;">
+            <legend>Questionnaire</legend>
+            <form action="/php/guest/submit.php" method="post" onsubmit="return validate()">
+                <label for="name" id="nameLabel">Name</label>: <input type="text" name="name" id="name"/><br>
+                <label for="age" id="ageLabel">Age</label>: <input type="text" name="age" id="age"/><br>
+                <label for="gender">Gender</label>:
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <label for="email" id="emailLabel">E-mail:
+                </label><input type="text" name="email" id="email"/><br>
+                <input type="submit" value="Submit"/>
+                <input type="reset" value="Clear Form"/>
+                <hr>
+                To see the results collected so far, click <a href="/php/guest/list.php">here</a>.
+            </form>
+        </fieldset>
+    </div>
+    <h3>Homework 4 (optional)</h3>
+    <div class="indent">
+        <p class="question">
+            For homework3, only one Table is created. This time, create the other two tables, party table and
+            party_guest table (you can choose different table names). Functions realized include: 1) Guest can find
+            out what parties will be given and when and where. 2) In additon to Guest name, Age, Gender, ....
+            User can choose what parties he or she wants to go. 3) Separate PHP programs are provided for the
+            organizer to input information about the parties will be given.
+        </p>
+        <fieldset style="width: 300px;">
+            <legend>Input a new party</legend>
+            <form action="../../php/party/submit.php" method="post" onsubmit="return validateParty()">
+                <label for="time" id="timeLabel">Time</label>:
+                <input type="text" name="time" id="time"/><br>
+                <label for="place" id="placeLabel">Place</label>:
+                <input type="text" name="place" id="place"/><br>
+                <label for="host" id="hostLabel">Host Name</label>:
+                <input type="text" name="host" id="host"/><br>
+                <input type="submit" value="Submit"/>
+                <input type="reset" value="Clear Form"/>
+                <hr>
+                To see all parties recorded so far, click <a href="/php/party/list.php">here</a>.
+            </form>
+        </fieldset>
+        <p>
+        <form action="/php/party_guest/list_party.php" method="post" onsubmit="return validateID()">
+            <label for="id" id="idLabel">Enter your ID</label> and then choose what parties you want to go:
+            <input type="text" name="id" id="id" style="width:50px"/>
+            <input type="submit" value="Choose"/>
+        </form>
+        </p>
+    </div>
+    <h3>Homework 5 (optional)</h3>
+    <div class="indent">
+        <p class="question">
+            Implement more query functions.
+        </p>
+        <ul class="indent">
+            <li>
+                <form action="/php/party_guest/list_guest.php" method="post" onsubmit="return validateNum()">
+                    List guests for the party with <label for="num" id="numLabel">party_num</label> =
+                    <input type="text" name="num" id="num" style="width:50px"/>
+                    <input type="submit" value="List"/>
+                </form>
+            </li>
+            <li>
+                <form action="/php/party/list.php" method="post" onsubmit="return validateDate()">
+                    Filter parties by <label for="date" id="dateLabel">date</label>:
+                    <input type="text" name="date" id="date"/>
+                    <input type="submit" value="Filter"/>
+                </form>
+            </li>
+            <li>
+                <form action="/php/party/list.php" method="post" onsubmit="return validateHost()">
+                    Filter parties by <label for="host2" id="host2Label">host name</label>:
+                    <input type="text" name="host" id="host2"/>
+                    <input type="submit" value="Filter"/>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <span class="fl">
+    [<a href="../../index.html">Index</a>] [<a
+            href="http://162.105.146.123/wst/webtech2019/unit3_5/index.html">Course</a>]
+</span>
+    <span class="fr">
+    by Sun Zhicheng
+</span>
+</div>
+
+<script>
+    $('#time').datetimepicker();
+    $('#date').datetimepicker({
+        timepicker: false,
+        format: 'Y/m/d'
+    });
+</script>
+</body>
+
+</html>
