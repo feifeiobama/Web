@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 10 Homework</title>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .pass { color: green }
+        .fail { color:red }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Unit 10: Web2.0 & Beyond</h2>
+    </div>
+    <hr>
+    <ol class="indent">
+        <li>
+            <p class="question">Try attacking your "survey" app with code injection. Write down your methods and results.</p>
+            <p>I've implemented 3 survey apps this semester. Here are the results of their code injection.</p>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Input</th>
+                    <th><a href="../unit3/index.html">Unit3</a></th>
+                    <th><a href="../unit4/index.html">Unit4</a></th>
+                    <th><a href="../unit8&9/index.html">Unit8&9</a></th>
+                </tr>
+                <tr>
+                    <td>HTML injection</td>
+                    <td><code>&lt;b&gt;A&lt;/b&gt;</code></td>
+                    <td class="pass">pass</td>
+                    <td class="pass">pass</td>
+                    <td class="pass">pass</td>
+                </tr>
+                <tr>
+                    <td>Javascript injection</td>
+                    <td><code>'-alert(1)-'</code></td>
+                    <td class="pass">pass</td>
+                    <td class="pass">pass</td>
+                    <td>pass</td>
+                </tr>
+                <tr>
+                    <td>SQL injection</td>
+                    <td><code>' OR '1'='1</code></td>
+                    <td>pass</td>
+                    <td class="pass">pass</td>
+                    <td class="pass">pass</td>
+                </tr>
+                <tr>
+                    <td>PHP injection</td>
+                    <td><code>${ phpinfo()}</code></td>
+                    <td>pass</td>
+                    <td class="pass">pass</td>
+                    <td>pass</td>
+                </tr>
+            </table>
+            <p>P.S. Pass in black is trivial. For example, unit3's survey app contains no SQL or PHP code.</p>
+        </li>
+        <li>
+            <p class="question">(Optional) Setup a wiki, and use wiki to publish some content.</p>
+            <p>Click <a href="http://162.105.146.180:8007/dokuwiki/index.php">HERE</a> to view my wiki (based on DokuWiki). It introduces some mathematical constants.</p>
+        </li>
+    </ol>
+    <hr>
+    <span class="fl">
+    [<a href="../../index.html">Index</a>] [<a
+            href="http://162.105.146.180/wst/webtech2019/unit10web2/index.html">Course</a>]
+</span>
+    <span class="fr">
+    by Sun Zhicheng
+</span>
+</div>
+</body>
+
+</html>
